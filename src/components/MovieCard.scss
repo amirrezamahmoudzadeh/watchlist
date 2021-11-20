@@ -1,0 +1,80 @@
+@import "variables";
+
+.movie-card {
+  height: 21.6rem;
+  position: relative;
+  cursor: pointer;
+  &:hover{
+      box-shadow: 0 0 25px 5px rgba($red, $alpha: 0.4);
+  }
+  @media (max-width: 1200px) and (min-height : 1200px) {
+    height: 25.9rem;
+  }
+  .overlay{
+    background-color: $dark;
+    color: $light;
+    text-align: center;
+    padding: 0.3rem 0;
+    font-weight: bold;
+  }
+  figure {
+    width: 14rem;
+    height: 21.6rem;
+    overflow: hidden;
+    border-radius: 5px;
+    @media (max-width: 1200px) and (min-height : 1200px) {
+      height: 25.9rem;
+      width: 17rem;
+    }
+    .replacer{
+      background-color: $pink;
+      height: 20rem;
+      text-align: center;vertical-align: middle;
+      font-size: 2em;
+      @media (max-width: 1200px) and (min-height : 1200px) {
+        height: 24.3rem;
+      }
+      @media (max-width: 500px) {
+        font-size: 1.3em;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  .inner-card-controls {
+    position: absolute;
+    border-radius: 5px;
+    visibility: hidden;
+    bottom: 3%;
+    left: 25%;
+    right: 25%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba($primary, $alpha: 0.5);
+    @media (max-width: 1200px) and (min-height : 1200px) {
+      visibility: visible;
+    }
+    @media (max-width: 500px){
+      visibility: visible;
+    }
+    .ctrl-btn {
+      background-color: transparent;
+      @media (max-width: 1200px) and (min-height : 1200px) {
+        font-size: 2.5em;
+      }
+      border: none;
+      outline: none;
+      font-size: 1.5em;
+      color: $light;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+.movie-card:hover .inner-card-controls {
+  visibility: visible;
+}

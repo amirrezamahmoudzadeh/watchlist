@@ -1,0 +1,72 @@
+@import "variables";
+
+.container {
+  background-color: $dark;
+}
+
+.inner-content {
+  background-color: transparent;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  @media (max-width: 1200px) and (min-height: 1200px) {
+    font-size: 1.6em;
+    height: 6rem;
+  }
+  @media (max-width: 530px) {
+    font-size: 0.8em;
+    height: 4rem;
+  }
+  .brand {
+    a {
+      color: $light;
+      text-decoration: none;
+      font-size: 1.3em;
+      font-weight: 900;
+      @media (max-width: 500px) {
+        font-size: 1.2em;
+      }
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+  .nav-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    @media (max-width: 400px) {
+        width: 100%;
+      }
+    li {
+      list-style: none;
+      margin: 0 1rem;
+      .i-search {
+        @media (max-width: 500px) {
+          padding: 0 0.5rem;
+        }
+      }
+      .search {
+        margin-left: 1rem;
+        font-weight: bold;
+        @media (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $light;
+      &.add-btn {
+        background-color: $red;
+        padding: 0.5rem;
+        border-radius: 10px;
+        color: $dark;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import 'variables';
+
+.card-link{
+    text-decoration: none;
+}
+.movie-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.movie-heading{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: RobotoCondensed;
+    color: $dark;
+    margin:  2rem 0;
+}
+.movie-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    justify-items: center;
+}
+.no-movie{
+    text-align: center;
+    font-size: 2.5em;
+    color: #949191;
+    font-family: RobotoCondensed;
+}
